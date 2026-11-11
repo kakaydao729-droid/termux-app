@@ -25,6 +25,8 @@ navigation:
     api-name: example-asyncapi
     layout: *a1
     summary: docs/pages/collection-overview.mdx
+  - page: Thaninvpn.com
+    path: ./docs/pages/thaninvpncom.mdx
 colors:
   accent-primary:
     light: "#008700"
