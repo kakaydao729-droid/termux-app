@@ -1,0 +1,193 @@
+{
+  "info": {
+    "title": "My Collection",
+    "version": "1.0.0",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)"
+  },
+  "paths": {
+    "/get": {
+      "get": {
+        "summary": "Get data",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "args",
+                    "headers",
+                    "url"
+                  ],
+                  "properties": {
+                    "url": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "args": {
+                      "type": "object",
+                      "required": [
+                        "name",
+                        "status"
+                      ],
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "status": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "headers": {
+                      "type": "object",
+                      "required": [
+                        "host",
+                        "x-forwarded-proto",
+                        "accept-encoding",
+                        "postman-token",
+                        "cache-control",
+                        "user-agent",
+                        "accept",
+                        "cookie"
+                      ],
+                      "properties": {
+                        "host": {
+                          "type": "string"
+                        },
+                        "accept": {
+                          "type": "string"
+                        },
+                        "cookie": {
+                          "type": "string"
+                        },
+                        "user-agent": {
+                          "type": "string"
+                        },
+                        "cache-control": {
+                          "type": "string"
+                        },
+                        "postman-token": {
+                          "type": "string",
+                          "format": "uuid"
+                        },
+                        "accept-encoding": {
+                          "type": "string"
+                        },
+                        "x-forwarded-proto": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "200_OK_-_Get_data": {
+                    "value": {
+                      "url": "https://postman-echo.com/get?name=postman&status=active",
+                      "args": {
+                        "name": "postman",
+                        "status": "active"
+                      },
+                      "headers": {
+                        "host": "postman-echo.com",
+                        "accept": "*/*",
+                        "cookie": "Cookie_1=value; __cf_bm=aLJPz2YqQS56B8VxmrRoWMCEhv_L56MdiiyUuU9xIlE-1794430024.506612-1.0.1.1-JjWoUrBND94N3YsqDbZQsQ671Ky9jZfXrwNbe8Uovaz6Oh5OMPPWZ6lnQTqL2Bphy7rIy4mbgoUNj8Seco3Ls.T8dGqJnCt0lIIsqZ7c6CsbF0BvbiOWqvzit9sdSqAz; _cfuvid=zMkj4AW6K7vEGiINo8EwC4qdtJXSoJ731ay5u0iQZBE-1794430024.506612-1.0.1.1-sguycUFJIUoLwQUbFTNjzJS1MtqATRj9gn_t0A9cXgo; sails.sid=s%3A8zKAf4YLVNJlu8mzeBdEYKdk4-1rlg7q.i8VxS3v5H48g%2FkSvKcX2R6k2cnTCCmvg4HGWwmjBsvg",
+                        "user-agent": "PostmanRuntime/7.56.1",
+                        "cache-control": "no-cache",
+                        "postman-token": "e0cb517c-d7c1-403c-b28b-47fe6cdab250",
+                        "accept-encoding": "gzip, br",
+                        "x-forwarded-proto": "https"
+                      }
+                    },
+                    "summary": "200 OK - Get data"
+                  }
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{name}}"
+          },
+          {
+            "in": "query",
+            "name": "status",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{status}}"
+          }
+        ],
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data.",
+        "operationId": "getGet",
+        "x-fern-sdk-method-name": "Get data"
+      }
+    },
+    "/post": {
+      "post": {
+        "summary": "Post data",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code.",
+        "operationId": "postPost",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "name": "Add your name in the body"
+              }
+            }
+          }
+        },
+        "x-fern-sdk-method-name": "Post data"
+      }
+    }
+  },
+  "openapi": "3.1.0",
+  "servers": [
+    {
+      "url": "https://{baseurl}",
+      "variables": {
+        "baseurl": {
+          "default": ""
+        }
+      }
+    }
+  ],
+  "security": [
+    {
+      "apiKeyAuth": []
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "apiKeyAuth": {
+        "in": "header",
+        "name": "X-API-Key",
+        "type": "apiKey"
+      }
+    }
+  }
+}

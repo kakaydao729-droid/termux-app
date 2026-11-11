@@ -1,0 +1,61 @@
+# yaml-language-server: $schema=https://schema.buildwithfern.dev/docs-yml.json
+
+instances:
+  - url: s-team-053621.docs.buildwithfern.com
+title: s-team-053621 | Documentation
+layout:
+  searchbar-placement: sidebar
+  page-width: full
+navigation:
+  - api: My Collection
+    api-name: collection
+    layout: &a1
+      - plant:
+          summary: docs/pages/plant-overview.mdx
+      - store:
+          summary: docs/pages/store-overview.mdx
+      - user:
+          summary: docs/pages/user-overview.mdx
+    summary: docs/pages/collection-overview.mdx
+  - api: Swagger Plant Store - OpenAPI 3.1
+    api-name: example-openapi
+    layout: *a1
+    summary: docs/pages/collection-overview.mdx
+  - api: Plant Store AsyncAPI
+    api-name: example-asyncapi
+    layout: *a1
+    summary: docs/pages/collection-overview.mdx
+colors:
+  accent-primary:
+    light: "#008700"
+    dark: "#4ADE80"
+  background:
+    light: "#FFFFFF"
+    dark: "#0000B6"
+  card-background:
+    dark: "#1a1a1c"
+    light: "#FFFFFF"
+  border:
+    light: "#E5E7EB"
+    dark: "#49608E"
+theme:
+  page-actions: toolbar
+  footer-nav: minimal
+  body: canvas
+  tabs: bubble
+  sidebar: minimal
+logo:
+  dark: docs/assets/logo-dark.svg
+  light: docs/assets/logo.svg
+  height: 20
+  href: https://buildwithfern.com
+favicon: docs/assets/favicon.svg
+css:
+  - styles.css
+  - docs/assets/onboarding-theme.css
+typography:
+  headingsFont:
+    name: Space Grotesk
+  bodyFont:
+    name: Outfit
+ai-search: {}

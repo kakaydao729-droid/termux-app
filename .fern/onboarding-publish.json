@@ -1,0 +1,10 @@
+{
+  "desiredContentHash": "183121d5d9e727523fb1f54d3846cdc23e32a4fad41277ecefbe1136326e5c04",
+  "docsUrl": "https://s-team-053621.docs.buildwithfern.com",
+  "starter": {
+    "repoOwner": "fern-api",
+    "repoName": "docs-starter-internal",
+    "commitSha": "7a136fbd26e750f96d049759bc080129b23e7a5c",
+    "label": "2026-07-layouts-launch"
+  }
+}
