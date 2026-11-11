@@ -20,7 +20,7 @@ navigation:
   - api: Swagger Plant Store - OpenAPI 3.1
     api-name: example-openapi
     layout: *a1
-    summary: docs/pages/collection-overview.mdx
+    summary: docs/pages/swagger-plant-store-overview.mdx
   - api: Plant Store AsyncAPI
     api-name: example-asyncapi
     layout: *a1
